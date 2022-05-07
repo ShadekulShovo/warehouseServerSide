@@ -68,16 +68,6 @@ async function run() {
       res.send(result);
     });
 
-    //items
-    // app.get('/service', async(req, res) =>{
-    //     const email = req.query.email;
-
-    //     const query = {email: email};
-    //     const cursor = serviceCollection.find(query);
-    //     const myItems = await cursor.toArray();
-    //     req.send(myItems)
-    // })
-
     //Delete items
     app.delete("/service/:id", async (req, res) => {
       const id = req.params.id;
