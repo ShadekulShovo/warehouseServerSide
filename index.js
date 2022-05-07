@@ -35,17 +35,6 @@ async function run() {
       res.send(service);
     });
 
-    // app.get('/service', async (req, res) => {
-    //     const email = req.query?.email;
-
-    //     const query = { email: email };
-
-    //     const cursor = serviceCollection.find(query);
-    //     const service = await cursor.toArray();
-    //     res.send(service);
-
-    // });
-
     app.get("/service:id", async (req, res) => {
       const id = req.params.id;
       const query = { _id: ObjectId(id) };
